@@ -22,9 +22,15 @@ loginBtn.addEventListener("click", function(){
     // console.log(totalDeposit);
     // document.getElementById("currentDeposit").innerText = totalDeposit;
 
-    updateSpanText("currentDeposit", depositNumber);
-    updateSpanText("currentBalance", depositNumber);
-    document.getElementById("depositAmount").value = "";
+    if (depositNumber < 0){
+        alert("Deposite Number Can not Be Deposit")
+    }
+    else{
+        updateSpanText("currentDeposit", depositNumber);
+        updateSpanText("currentBalance", depositNumber);
+        document.getElementById("depositAmount").value = "";
+    }
+   
 
     // const currentBalance = document.getElementById("currentBalance").innerText;
     // const currentBalanceNumber = parseFloat(currentBalance); 
